@@ -14,7 +14,13 @@
     <!-- Section-->
     <section class="py-5">
         <div class="container"></div>
-            {% lorem 5 p random %}
+            <form acton="." method="POST">
+                {% csrf_token %}
+                <table class="table">                
+                    {{ form_cliente.as_table }}
+                </table>
+                <input type="submit" value="Enviar">
+            </form>
         </div>
     </section>
 
